@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+                    <title>Track Manager</title>
+                    </head>
+                    <body>
+                        <div>
+                            <div>
+                                <h2>Edit Track</h2>
+                            </div>
+                            <div>
+                                <form action="editTrack" method="POST">
+                                    <div>
+                                        <label for="name">track name</label>
+                                        <div><input type="text" name="name" id="name" th:value="${track.name}"required/></div>
+                                    </div>
+                                    <div><label for="city">city</label>
+                                        <div><input type="text" name="city" id="city" th:value="${track.city}"required/></div>
+                                    </div>
+                                    <div>
+                                        <label for="state">state</label>
+                                        <div><input type="text" name="state" id="state" th:value="${track.state}"required/></div>
+                                    </div>
+
+                                    <div><label for="zip">zip</label>
+                                        <div><input type="number" name="zip" id="zip" th:value="${track.zip}"required/></div>
+                                    </div>
+
+                                    <div><label for="owner">owner</label>
+                                        <div><input type="text" name="owner" id="owner" th:value="${track.owner}"required/></div>
+                                    </div>
+                                    <input type="hidden" name="id" th:value="${track.id}"/>
+                                    <button type="submit">Submit Changes</button>
+                                </form>
+                            </div>
+                        </div>
+                    </body>
+                    </html>
